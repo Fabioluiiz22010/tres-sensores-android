@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Socorro.Titulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Histórico" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLimpar"
+                style="@style/Socorro.BotaoTexto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpar"
+                android:textColor="@color/socorro_vermelho" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Socorro.TextoSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="sec"
+            android:text="Tudo o que aconteceu neste celular: quedas, pedidos de ajuda e alarmes cancelados." />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Socorro.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:contentPaddingBottom="8dp"
+            app:contentPaddingTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtHistoricoVazio"
+                    style="@style/Socorro.TextoSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="40dp"
+                    android:paddingBottom="40dp"
+                    android:tag="sec"
+                    android:text="Nada por aqui ainda.\nOs acontecimentos aparecerão nesta lista." />
+
+                <LinearLayout
+                    android:id="@+id/listaHistorico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPainel"
+            style="@style/Socorro.BotaoContorno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Ver o painel da central" />
+    </LinearLayout>
+</ScrollView>

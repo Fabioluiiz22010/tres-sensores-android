@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/socorro_fundo"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+      <FrameLayout
+        android:id="@+id/barraTopo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/socorro_primaria"
+        android:tag="fixo">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:tag="fixo"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+            app:subtitleTextAppearance="@style/Socorro.BarraSubtitulo"
+            app:title="Socorro"
+            app:titleTextAppearance="@style/Socorro.BarraTitulo" />
+    </FrameLayout>
+
+      <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include
+            android:id="@+id/telaInicio"
+            layout="@layout/tela_inicio" />
+
+        <include
+            android:id="@+id/telaSensores"
+            layout="@layout/tela_sensores"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/telaHistorico"
+            layout="@layout/tela_historico"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/telaAjustes"
+            layout="@layout/tela_ajustes"
+            android:visibility="gone" />
+    </FrameLayout>
+
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/socorro_borda"
+        android:tag="fixo" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navegacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/socorro_card"
+        android:minHeight="76dp"
+        android:tag="fixo"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/nav_item"
+        app:itemTextAppearanceActive="@style/Socorro.MenuTexto"
+        app:itemTextAppearanceInactive="@style/Socorro.MenuTexto"
+        app:itemTextColor="@color/nav_item"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_navegacao" />
+</LinearLayout>

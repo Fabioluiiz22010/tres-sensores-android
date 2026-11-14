@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="fixo"
+            app:cardBackgroundColor="@color/socorro_navy_2"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:contentPadding="20dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:tag="fixo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:tag="fixo">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:contentDescription="Escudo"
+                        android:src="@drawable/ic_escudo"
+                        app:tint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:tag="fixo"
+                        android:text="Proteção desligada"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtStatusDetalhe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:tag="fixo"
+                    android:text="Ative para detectar quedas mesmo com o app fechado."
+                    android:textColor="#E2E8F0"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnProtecao"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="Ativar proteção"
+                    android:textColor="@color/socorro_navy"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:tag="sec"
+            android:text="EMERGÊNCIA"
+            android:textColor="@color/socorro_texto_2"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_anel_sos">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPanico"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/socorro_vermelho"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:text="SOS"
+                android:textColor="#FFFFFF"
+                android:textSize="44sp"
+                android:textStyle="bold"
+                android:elevation="6dp"
+                app:cornerRadius="85dp" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:tag="sec"
+            android:text="Toque no SOS para pedir ajuda.\nVocê tem 5 segundos para cancelar."
+            android:textColor="@color/socorro_texto_2"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:tag="sec"
+            android:text="AGORA"
+            android:textColor="@color/socorro_texto_2"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/socorro_card"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:contentPadding="16dp"
+                app:strokeColor="@color/socorro_borda"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="sec"
+                        android:text="Clima"
+                        android:textColor="@color/socorro_texto_2"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txtClimaResumo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="—"
+                        android:textColor="@color/socorro_texto"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtClima"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:tag="sec"
+                        android:text="Toque em atualizar"
+                        android:textColor="@color/socorro_texto_2"
+                        android:textSize="12sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnClima"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="0dp"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:text="Atualizar"
+                        android:textColor="@color/socorro_azul" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/socorro_card"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:contentPadding="16dp"
+                app:strokeColor="@color/socorro_borda"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="sec"
+                        android:text="Central"
+                        android:textColor="@color/socorro_texto_2"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txtApiResumo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:tag="fixo"
+                        android:text="—"
+                        android:textColor="@color/socorro_texto_2"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtApi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:tag="sec"
+                        android:text="Nenhum envio ainda"
+                        android:textColor="@color/socorro_texto_2"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSimular"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Simular uma queda (teste)"
+            android:textColor="@color/socorro_texto_2"
+            app:cornerRadius="14dp"
+            app:strokeColor="@color/socorro_borda" />
+    </LinearLayout>
+</ScrollView>
